@@ -14,6 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group([
+    'middleware' => 'api'
+], function ($router) {
+    Route::group([
+        'prefix' => 'auth'
+    ], function ($router) {
+        Route::post('register', 'JWTAuthController@register');
+        Route::post('login', 'JWTAuthController@login');
+        Route::post('logout', 'JWTAuthController@logout');
+        Route::post('refresh', 'JWTAuthController@refresh');
+        Route::get('profile', 'JWTAuthController@profile');
+        Route::put('update/{id}', 'JWTAuthController@update');
+        Route::delete('delete/{id}', 'JWTAuthController@delete');
+    });
+
+    Route::group([
+        'prefix' => 'v1'
+    ], function($router) {
+
+    });
 });

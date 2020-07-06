@@ -4,7 +4,7 @@ The repository forms the backend in form of a RESTful API for the Eurystheus pro
 ## Table of contents
 1. [Used](#used)
 1. [System Requirements](#system-requirements)
-1. [Features](#features)
+1. [Features / Issues](#features-/-issues)
 1. [Install](#install)
     1. [Via GitHub](#via-github)
 1. [Credits](#credits)
@@ -21,9 +21,9 @@ The repository forms the backend in form of a RESTful API for the Eurystheus pro
 * Web-Server ([Nginx](https://www.nginx.com/) or [Apache2](https://httpd.apache.org/))
 * Database ([MariaDB](https://mariadb.org/)/[MySQL](https://www.mysql.com/))
 
-## Features
-* [ ] Authentication via JWT
-* [ ] Create new projects
+## Features / Issues
+* [X] #1 Authentication via JWT
+* [ ] Handle projects
 
 ## Install
 How to install this RESTful API?
